@@ -18,7 +18,7 @@ const Support = () => {
         setIsLoading(true);
 
         try {
-            const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+            const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
             const chatHistory = messages.map((msg) => msg.content);
             const response = await model.generateContent([...chatHistory, userInput]);
 
